@@ -2,8 +2,8 @@ import java.awt.*;
 
 public class FlyweightDemoMain {
     static int CANVAS_SIZE = 500;
-    static int TREES_TO_DRAW = 100000;
-    static int TREE_TYPES = 2;
+    static int TREES_TO_DRAW = 300000;
+    static int TREE_TYPES = 3;
 
     public static void main(String[] args) {
         Forest forest = new Forest();
@@ -11,7 +11,9 @@ public class FlyweightDemoMain {
             forest.plantTree(random(0, CANVAS_SIZE), random(0, CANVAS_SIZE),
                     "Summer Oak", Color.GREEN, "Oak texture stub");
             forest.plantTree(random(0, CANVAS_SIZE), random(0, CANVAS_SIZE),
-                    "Autumn Oak", Color.ORANGE, "Autumn Oak texture stub");
+                    "Autumn Oak", Color.LIGHT_GRAY, "Autumn Oak texture stub");
+            forest.plantTree(random(0, CANVAS_SIZE), random(0, CANVAS_SIZE),
+                    "Summer Birch", Color.BLUE, "Summer Birch texture stub");
         }
         forest.setSize(CANVAS_SIZE, CANVAS_SIZE);
         forest.setVisible(true);
